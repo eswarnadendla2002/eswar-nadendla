@@ -1,0 +1,131 @@
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .player {
+    position: relative;
+    width: 100%;
+    background: #f1f3f4;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  
+  .player .imgbox {
+    position: relative;
+   border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .player .imgbox img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover; /* Change this line to ensure the image fits the container */
+  }
+  
+  .map h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 32%;
+    align-items: center;
+  }
+  
+  .player audio {
+    width: 100%;
+    outline: none;
+  }
+  .imgbox {
+    position: relative;
+  }
+  
+  
+  
+ 
+  .imgbox {
+    position: relative;
+  }
+  
+  .download-overlay {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 50%;
+    display: none;
+    box-shadow: 33px 30px 115px 16px rgba(253,246,246,0.75);
+-webkit-box-shadow: 33px 30px 115px 16px rgba(253,246,246,0.75);
+-moz-box-shadow: 33px 30px 115px 16px rgba(253,246,246,0.75);
+  }
+  
+  .download-link:hover .download-overlay {
+    display: block;
+  }
+  
+  .download-text {
+    color: #333;
+    font-weight: bold;
+    font-size: 27px;
+    cursor: pointer;
+  }
+  
+  .download-link {
+    text-decoration: none;
+  }
+  
+  .fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-more{
+    padding:10px 20px;
+    background-color:'#8873ef';
+  }
+  .loading{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform(-50%,50%);
+    z-index:99;
+    padding:20px 60px 20px 60px;
+    border:2px solid #333;
+    border-radius: 5px;
+    
+  }
+  .overlay-mask{
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the overlay is on top of other elements */
+  opacity: 0.8;
+  color: white;
+  font-size: 24px;
+  }

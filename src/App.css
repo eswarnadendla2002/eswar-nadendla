@@ -9,7 +9,10 @@
 html {
   scroll-behavior: smooth;
 }
-
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
 body {
   font-family: "Urbanist", sans-serif;
 }
