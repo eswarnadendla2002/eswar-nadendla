@@ -27,14 +27,14 @@ const ProjectDetails = () => {
         <section className="text-gray-700 body-font overflow-hidden bg-white">
           <div className="container px-5 py-24 mx-auto">
           <div
-            className="lg:w-4/5 mx-auto flex-wrap cursor-pointer"
-            onClick={() =>
-              fullscreenImage ? closeFullscreen() : openFullscreen(selectedProjects.image)
-            }
+            className="lg:w-4/5 mx-auto flex-wrap "
+            
           >
               <img 
                 alt="ecommerce"
-                className=" w-full h-[400px]  rounded border border-gray-200"
+                className=" w-full h-[400px]  rounded border border-gray-200 cursor-pointer" onClick={() =>
+                  fullscreenImage ? closeFullscreen() : openFullscreen(selectedProjects.image)
+                }
                 src={selectedProjects ? selectedProjects.image : ''}
               />
               <div className=" w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
