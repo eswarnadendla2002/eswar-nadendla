@@ -3,6 +3,7 @@ import { FaBars } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { Link as Line} from 'react-router-dom';
+import logo from '../../assets/images/logo.png'
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -48,7 +49,7 @@ const Navbar = () => {
       <nav className="container flex justify-between items-center">
         <div className="navleft py-5 font-bold text-3xl hover:text-color-secondary ease-in duration-200">
           <div className="flex md:items-center md:gap-[10px]">
-            <span className='w-[35px] h-[35px]  bg-primaryColor text-white text-[18px] font-[500] rounded-full flex items-center justify-center'>N</span>
+            <span className='w-[35px] h-[35px] text-white text-[18px] font-[500] rounded-full flex items-center justify-center'><img src={logo} alt='' className='max-w-none w-[61px] h-[61px]'/></span>
             <div className='loading-[20px]'>
               <h2 className='text-[22px] text-smallTextColor font-[700] items-center'>Nadendla Eswar</h2>
             </div>

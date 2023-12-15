@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./designs.css";
 import { MdFileDownload } from "react-icons/md";
 import image1 from "../../assets/images/designs/images/bday_ntr_special.jpg";
@@ -28,7 +28,9 @@ const Designs = () => {
   const handleImageLoad = () => {
     setLoading(false);
   };
-
+useEffect(()=>{
+  window.scrollTo(0,0);
+},[])
   return (
     <>
       <section id='designs'>

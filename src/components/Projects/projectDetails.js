@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { projects } from './projectData';
 
@@ -7,13 +7,32 @@ const ProjectDetails = () => {
     const { id } = useParams();
     const selectedProject = projects.filter(project => project.id == id); // Access the first element
     const selectedProjects = selectedProject[0];
+    const [fullscreenImage, setFullscreenImage] = useState(null);
+
+    const openFullscreen = (image) => {
+      setFullscreenImage(image);
+    };
   
+    const closeFullscreen = () => {
+      setFullscreenImage(null);
+    };
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+
+    
     return (
       <>
         <section className="text-gray-700 body-font overflow-hidden bg-white">
           <div className="container px-5 py-24 mx-auto">
-            <div className="lg:w-4/5 mx-auto flex-wrap">
-              <img
+          <div
+            className="lg:w-4/5 mx-auto flex-wrap cursor-pointer"
+            onClick={() =>
+              fullscreenImage ? closeFullscreen() : openFullscreen(selectedProjects.image)
+            }
+          >
+              <img 
                 alt="ecommerce"
                 className=" w-full h-[400px]  rounded border border-gray-200"
                 src={selectedProjects ? selectedProjects.image : ''}
@@ -37,6 +56,15 @@ const ProjectDetails = () => {
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
          
         </div>
+        {fullscreenImage && (
+          <div className="fullscreen-overlay" onClick={closeFullscreen}>
+            <img
+              src={fullscreenImage}
+              alt="fullscreen"
+              className="fullscreen-image"
+            />
+          </div>
+        )}
         <div class="flex">
           
           <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"><a target="_blank" href={selectedProjects.github}>Github Link</a></button>
