@@ -64,7 +64,7 @@ const Navbar = () => {
                 offset={30}
                 duration={500}
 
-                className="hover:text-color-secondary ease-in duration-200 text-[22ßpx] ßcursor-pointer"
+                className="hover:text-color-secondary ease-in duration-200 text-[22ßpx] cursor-pointer"
               >
                 Home
               </Link>

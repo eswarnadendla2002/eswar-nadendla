@@ -67,22 +67,24 @@ const Hero = () => {
                 data-aos-duration='1500'
                 className='flex gap-2 text-headingColor font-[500] mt-16 text-[18px] leading-7  sm:pr-10'
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat,
-                harum! Cum numquam laudantium nobis iusto in. Tempora deserunt eaque
-                a incidunt, corporis maxime cumque illo?
+                Eswar Nadendla: Seasoned web and app developer with 1+ years' expertise. Proficient in HTML, CSS, JS, React, React Native, Node.js, and MongoDB. A coding enthusiast dedicated to delivering innovative and efficient solutions with a blend of passion and creativity.
               </p>
               <div className='flex mt-10 gap-x-6'>
             <div className='text-[24px] hover:border-b hover:border-1 hover:border-smallTextColor hover:rounded-[1px] cursor-pointer'>
-              <i class='ri-instagram-line'></i>
+             
+              <a href="https://www.instagram.com/eswar_nadendla2002/" target="_blank"> <i class='ri-instagram-line'></i></a>
             </div>
             <div className='text-[24px] hover:border-b hover:border-1 hover:border-smallTextColor hover:rounded-[1px] cursor-pointer'>
-              <i class='ri-facebook-box-line'></i>
+              
+              <a href="https://www.facebook.com/eswar.nadendla.3/"target="_blank" ><i class='ri-facebook-box-line'></i></a>
             </div>
             <div className='text-[24px] hover:border-b hover:border-1 hover:border-smallTextColor hover:rounded-[1px] cursor-pointer'>
-              <i class='ri-twitter-line'></i>
+             
+              <a href="https://twitter.com/eswar_nadendla" target="_blank"> <i class='ri-twitter-line'></i></a>
             </div>
             <div className='text-[24px] hover:border-b hover:border-1 hover:border-smallTextColor hover:rounded-[1px] cursor-pointer'>
-              <i class='ri-linkedin-box-line'></i>
+              
+              <a href="https://www.linkedin.com/in/eswar-nadendla-92a7b4227" target='_blank'><i class='ri-linkedin-box-line'></i></a>
             </div>
           </div>
             </div>

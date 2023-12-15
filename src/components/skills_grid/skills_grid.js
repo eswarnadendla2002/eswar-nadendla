@@ -12,7 +12,7 @@ const Skillsgrid = () => {
     <>
       <div className="flex flex-col items-center justify-center text-align-center mb-14 mt-6" id='skills'>
         <h2 className="text-[35px] text-smallTextColor font-[700]">Skills</h2>
-        <p className="text-[20px]">
+        <p className="text-[20px] text-center">
           Here are those which I used to make beautiful things
         </p>
         <div className="">
