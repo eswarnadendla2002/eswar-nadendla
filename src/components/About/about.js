@@ -1,5 +1,6 @@
 import React from "react";
 import heroImg from "../../assets/images/3D-render.png";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
@@ -37,9 +38,11 @@ const About = () => {
                 Let's collaborate and turn your vision into reality! Feel free to explore my portfolio to see some of the exciting projects I've had the pleasure of working on. */}
               I'm Eswar Nadendla, a skilled web and app developer with over 1 year of experience. Proficient in HTML, CSS, JS, and React for web development. Expertise extends to React Native for cross-platform app development, backed by Node.js and MongoDB. Knowledgeable in Java and Python. Committed to crafting innovative solutions, I bring a passion for code and creativity to every project, ensuring impactful and efficient results.
               </p>
+              <Link to='/explore'>
               <button className="flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] mt-10 max-h-[40px] hover:bg-smallTextColor hover:text-white ease-in-out duration-500">
-                <i class="ri-send-plane-line"></i>Explore More..
+               <i class="ri-send-plane-line"></i>Explore More..
               </button>
+              </Link>
             </div>
           </div>
         </div>

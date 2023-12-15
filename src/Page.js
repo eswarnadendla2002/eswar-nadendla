@@ -6,7 +6,7 @@ import About from "./components/About/about";
 import Skillsgrid from "./components/skills_grid/skills_grid";
 import Projects from "./components/Projects/projects";
 import Contact from "./components/Contact/contact";
-import { ImUpload2 } from "react-icons/im";
+import { MdUpload } from "react-icons/md";
 
 const Page = () => {
   const [scrollVisible, setScrollVisible] = useState(false);
@@ -46,22 +46,22 @@ const Page = () => {
         <div
           style={{
             position: "fixed",
-            padding: "1rem 2rem",
+            padding: ".5rem 1rem",
             fontSize: "30px",
             bottom: "40px",
             right: "40px",
-            borderRadius: "60%",
-         
-            color: "#ea580c",
+            borderRadius: "10%",
+            backgroundColor: "#ea580c",
+            color: "#fff",
             textAlign: "center",
             cursor: "pointer",
-            // boxShadow:
-            //   'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset',
+            boxShadow:
+              'rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset',
             transition: "background-color 7s ease-in-out",
           }}
           onClick={scrollToTop}
         >
-          <ImUpload2 />
+          <MdUpload />
         </div>
       )}
     </>
