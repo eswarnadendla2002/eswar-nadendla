@@ -10,7 +10,7 @@ const ExploreMore = () => {
     <>
     
     <div className=''>
-        <h2 className='flex justify-center items-center mt-4 text-[35px]'>About Eswar Nadendla?</h2>
+        <h2 className='flex justify-center items-center mt-4 text-[24px] md:text-[35px]'>About Eswar Nadendla?</h2>
         <div className='flex justify-center items-center '>
             <div className=''>
                
