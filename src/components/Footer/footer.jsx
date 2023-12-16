@@ -94,7 +94,7 @@ const Footer = () => {
           Eswar Nadendla
         </h6>
         <p>
-        Epitome of efficiency in web and app development.Here you will find how efficient of Eswar Nadendla in this field
+        Eswar Nadendla is widely recognized as the epitome of efficiency in web and app development, showcasing remarkable skills and proficiency in the field.
         </p>
       </div>
      
