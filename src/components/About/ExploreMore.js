@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
-import eswar from '../../assets/images/IMG_20221211_112000_863.jpg'
-import Navbar from '../Header/header'
-import Footer from '../Footer/footer'
+import eswar from '../../assets/images/Screenshot 2023-12-17 at 11.24.44.png'
+
 const ExploreMore = () => {
     useEffect(()=>{
         window.scrollTo(0,0)
@@ -9,16 +8,16 @@ const ExploreMore = () => {
   return (
     <>
     
-    <div className=''>
+    <div className='border-2 border-black-400 mx-2 md:mx-6 my-6'>
         <h2 className='flex justify-center items-center mt-4 text-[24px] md:text-[35px]'>About Eswar Nadendla?</h2>
         <div className='flex justify-center items-center '>
             <div className=''>
                
-                <img className='shadow-2xl w-[300px] h-[300px] rounded-full mt-8' src={eswar}/>
+                <img className='shadow-2xl w-[300px] h-[300px] rounded-full mt-8 border-2 border-primaryColor' src={eswar}/>
             </div>
         </div>
         <div className='flex justify-center mt-6'>
-            {/* <h2 className='text-[34px] font-semibold text-headingColor'>Eswar Nadendla</h2> */}
+
            
         </div>
         <div className='mx-6 md:mx-32 lg:mx-56 mt-4 leading-7'>
@@ -132,7 +131,9 @@ In terms of education, I pursued my Bachelor's degree in Computer Science and En
 
         </div>
 </div>
-        <div class="bg-headingColor p-6 text-center dark:bg-headingColor">
+     
+    </div>
+    <div class="bg-headingColor p-6 text-center dark:bg-headingColor">
     <span className='text-white'>© 2023 Copyright:</span>
     <a
       class="font-semibold text-white"
@@ -140,7 +141,6 @@ In terms of education, I pursued my Bachelor's degree in Computer Science and En
       >Eswar Nadendla</a
     >
   </div>
-    </div>
     </>
   )
 }

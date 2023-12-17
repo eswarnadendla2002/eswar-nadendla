@@ -50,10 +50,21 @@ app.post('/create', async (req, res) => {
         console.log('User created:', user1);
         res.status(200).json('Successfully created!');
         const mailOptions = {
-            from: process.env.AUTH_EMAIL,
+            from: {
+                name: 'Eswar Nadendla',
+                address: process.env.AUTH_EMAIL,
+            },
+            
             to: email,
-            subject: "Eswar Nadendla",
-            html: `<p>Thankyou for reaching us!</p>`,
+            subject: "Thank you for reaching to me!",
+            html: `<p>Dear <strong>${name}</strong>,</p>
+            <p>We appreciate your interest and the opportunity to assist you. Your query is important to us, and we will make every effort to provide you with the information you need.</p>
+            <p>Thank you for considering me. <em>We reach you as soon as possible</em> and providing a satisfactory resolution to your query.
+            </p>
+            <p><strong>Best regards,</strong></p>
+            <p><strong>Nadendla Eswar</strong></p>
+            <p><strong>Web Dev</strong></p>
+            `,
           }
           transporter.sendMail(mailOptions);
         
