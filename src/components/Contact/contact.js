@@ -43,8 +43,8 @@ const Contact = () => {
     message: message
   }
   const submitHandler = (e) => {
-    const url = "https://eswar-nadendla.onrender.com/create";
-    // const url = "http://localhost:8000/create";
+    // const url = "https://eswar-nadendla.onrender.com/create";
+    const url = "http://localhost:8000/create";
     axios
       .post(url, data)
       .then((res) => {

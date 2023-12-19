@@ -35,44 +35,69 @@ let transporter = nodemailer.createTransport({
       console.log(success);
     }
   });
+
 app.post('/create', async (req, res) => {
-    const { name, email, phone, company, message } = req.body;
+  const { name, email, phone, company, message } = req.body;
 
-    try {
-        const user1 = await Schema.create({
-            name,
-            email,
-            phone,
-            company,
-            message
-        })
+  try {
+      const user1 = await Schema.create({
+          name,
+          email,
+          phone,
+          company,
+          message
+      })
 
-        console.log('User created:', user1);
-        res.status(200).json('Successfully created!');
-        const mailOptions = {
-            from: {
-                name: 'Eswar Nadendla',
-                address: process.env.AUTH_EMAIL,
-            },
-            
-            to: email,
-            subject: "Thank you for reaching to me!",
-            html: `<p>Dear <strong>${name}</strong>,</p>
-            <p>We appreciate your interest and the opportunity to assist you. Your query is important to us, and we will make every effort to provide you with the information you need.</p>
-            <p>Thank you for considering me. <em>We reach you as soon as possible</em> and providing a satisfactory resolution to your query.
-            </p>
-            <p><strong>Best regards,</strong></p>
-            <p><strong>Nadendla Eswar</strong></p>
-            <p><strong>Web Dev</strong></p>
-            `,
-          }
-          transporter.sendMail(mailOptions);
-        
-    } catch (error) {
-        console.error('Error creating user:', error);
-        res.status(500).json('Error creating user');
-    }
+      console.log('User created:', user1);
+      res.status(200).json('Successfully created!');
+
+      const mailOptionsUser = generateMailOptions({
+        to: email,
+        subject: "Thank you for reaching to me!",
+        html: `<p>Dear <strong>${name}</strong>,</p>
+        <p>I appreciate your interest and the opportunity to assist you. Your query is important to me, and I will make every effort to provide you with the information you need.</p>
+        <p>Thank you for considering me. <em>I reach you as soon as possible</em> and providing a satisfactory resolution to your query.
+        </p>
+        <p><strong>Best regards,</strong></p>
+        <p>Nadendla Eswar</p>
+        <p>Web Dev</p>
+        `,
+      });
+
+      const mailOptionsAdmin = generateMailOptions({
+        to:'eswarnadendla2002@gmail.com',
+        subject:"Hey! You got a Message from your Website!",
+        html:`<p>Hii Eswar,You got a New Message !</p>
+        <p><strong>Name</strong>:-${name}</p>
+        <p>:<strong>Email</strong>-${email}</p>
+        <p><strong>Phone</strong>:-${phone}</p>
+        <p><strong>Company</strong>:-${company}</p>
+        <p><strong>Message</strong>:-${message}</p>
+        `,
+      });
+
+      await Promise.all([
+          transporter.sendMail(mailOptionsUser),
+          transporter.sendMail(mailOptionsAdmin)
+      ]);
+
+  } catch (error) {
+      console.error('Error creating user:', error);
+      res.status(500).json('Error creating user');
+  }
 });
+
+function generateMailOptions({ from = process.env.AUTH_EMAIL, to, subject, html }) {
+  return {
+      from: {
+          name: 'Eswar Nadendla',
+          address: from,
+      },
+      to,
+      subject,
+      html,
+  };
+}
 
 app.listen(8000, () => {
     console.log("Server connected to port 8000");
